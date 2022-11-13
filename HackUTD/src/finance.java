@@ -67,14 +67,11 @@ public class finance {
 		titleNamePanel.setVisible(false);
 		learnPanel.setVisible(false);
 		nPanel = new JPanel();
-		nPanel.setBounds(100, 100, 600, 250);
-		nPanel.setBackground(Color.BLUE);
 		newCon.add(nPanel);
-		
 		nArea = new JTextArea();
-		
 		nArea.setBounds(100,100,100,100);
 		nArea.setBackground(Color.RED);
+		nPanel.setVisible(true);
 		
 		}
 
