@@ -16,7 +16,7 @@ public class finance {
 	JButton learnButton;
 	tHandler tHand = new tHandler();
 	LCHandler lcHand = new LCHandler();
-	
+	SCHandler scHand = new SCHandler();
 	
 
 	public static void main(String[] args) {
@@ -80,6 +80,7 @@ public class finance {
 		nPanel.add(cc);
 		
 		lcCalc.addActionListener(lcHand);
+		scCalc.addActionListener(scHand);
 		
 		nPanel.setBounds(0,0,800,600);
 		nPanel.setBackground(Color.BLACK);
@@ -94,13 +95,21 @@ public class finance {
 		//newCon.add(nPanel);
 		
 		}
+	public void savingsCalculator() {
+		titleNamePanel.setVisible(false);
+		learnPanel.setVisible(false);
+		saveCalc s = new saveCalc();
+	}
 	public void loanCalclator() {
 		titleNamePanel.setVisible(false);
 		learnPanel.setVisible(false);
-		//nPanel.setVisible(false);
-		
 		loanCalc s = new loanCalc();
 		
+	}
+	public class SCHandler implements ActionListener{
+		public void actionPerformed(ActionEvent event) {
+			savingsCalculator();
+		}
 	}
 	public class LCHandler implements ActionListener{
 		public void actionPerformed(ActionEvent event) {

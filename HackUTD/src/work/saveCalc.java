@@ -55,12 +55,16 @@ public static void main(String[] args) {
 
 private void computeValue() {
     try {
-        double annualInterestRate = Double.parseDouble(jtfAnnualInterestRate.getText());
-        double monthlyInterestRate = annualInterestRate / 1200.0;
-        int NumberOfYears = Integer.parseInt(jtfNumberOfMonths.getText());
-        double investmentAmount = Double.parseDouble(jtfInvestmentAmount.getText());
-        double futureValue = investmentAmount * Math.pow(1.0 + monthlyInterestRate, NumberOfYears * 12);
-        jtfFutureValue.setText(String.format("%.2f", futureValue));
+    	int NumberOfMonths = Integer.parseInt(jtfNumberOfMonths.getText());
+    	double savingsAmount = Double.parseDouble(jtfInvestmentAmount.getText());
+    	double futureValue = NumberOfMonths*savingsAmount;
+    	jtfFutureValue.setText(String.format("%.2f", futureValue));
+    //    double annualInterestRate = Double.parseDouble(jtfAnnualInterestRate.getText());
+      //  double monthlyInterestRate = annualInterestRate / 1200.0;
+     //   int NumberOfYears = Integer.parseInt(jtfNumberOfMonths.getText());
+      //  double investmentAmount = Double.parseDouble(jtfInvestmentAmount.getText());
+     //   double futureValue = investmentAmount * Math.pow(1.0 + monthlyInterestRate, NumberOfYears * 12);
+       // jtfFutureValue.setText(String.format("%.2f", futureValue));
     } catch (Exception e) {
         JOptionPane.showMessageDialog(null, " Please enter numeric values.");
     }
@@ -68,7 +72,6 @@ private void computeValue() {
 
 private void resetForm() {
     jtfInvestmentAmount.setText("");
-    jtfAnnualInterestRate.setText("");
     jtfNumberOfMonths.setText("");
     jtfFutureValue.setText("");
 }
