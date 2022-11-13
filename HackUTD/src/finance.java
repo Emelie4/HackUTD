@@ -8,8 +8,7 @@ public class finance {
 	
 	JFrame newFrame;
 	Container newCon;
-	JPanel titleNamePanelOutline;
-	JPanel titleNamePanelInner;
+	JPanel titleNamePanel;
 	JLabel titleNameLabel;
 	
 
@@ -31,12 +30,12 @@ public class finance {
 		newFrame.setLayout(null);
 		newCon = newFrame.getContentPane();
 		newCon = newFrame.getContentPane();
-		titleNamePanelOutline = new JPanel();
+		titleNamePanel = new JPanel();
 		titleNameLabel = new JLabel();
-		titleNamePanelOutline.setBounds(100,100,600,150);
-		titleNamePanelOutline.setBackground(Color.BLACK);
+		titleNamePanel.setBounds(100,100,600,150);
+		titleNamePanel.setBackground(Color.BLACK);
 		
-		newCon.add(titleNamePanelOutline);
+		newCon.add(titleNamePanel);
 		
 		
 		
