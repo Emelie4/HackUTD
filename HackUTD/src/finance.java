@@ -1,6 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
-
+import java.awt.event.*;  
 
 
 public class finance {
@@ -12,7 +12,8 @@ public class finance {
 	Font titleFont = new Font("Times New Roman", Font.PLAIN, 80);
 	Font learnFont = new Font("Times New Roman", Font.PLAIN, 40);
 	JButton learnButton;
-	JTextArea = nArea;
+	tHandler tHand = new tHandler();
+	JTextArea nArea;
 	
 
 	public static void main(String[] args) {
@@ -49,6 +50,7 @@ public class finance {
 		learnButton.setBackground(Color.WHITE);
 		learnButton.setForeground(Color.BLACK);
 		learnButton.setFont(learnFont);
+		learnButton.addActionListener(tHand);
 		
 		learnPanel.setBounds(300,250,200,100);
 		learnPanel.setBackground(Color.BLACK);
@@ -62,17 +64,24 @@ public class finance {
 	}//end of finance constructor
 	
 	public void nextPanel() {
+		titleNamePanel.setVisible(false);
+		learnPanel.setVisible(false);
 		nPanel = new JPanel();
 		nPanel.setBounds(100, 100, 600, 250);
 		nPanel.setBackground(Color.BLUE);
+		newCon.add(nPanel);
 		
 		nArea = new JTextArea();
 		
-		//nArea.setBounds(100,100,100,100);
-		//nArea.setBackgound();
+		nArea.setBounds(100,100,100,100);
+		nArea.setBackground(Color.RED);
 		
-		newCon.add(nPanel);
-	}
+		}
 
+	public class tHandler implements ActionListener {
+		public void actionPerformed(ActionEvent event) {
+			nextPanel();
+		}
+	}
 	
 }//end of class
