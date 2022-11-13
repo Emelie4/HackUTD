@@ -1,5 +1,7 @@
+package work;
 import java.awt.*;
 import javax.swing.*;
+
 import java.awt.event.*;  
 
 
@@ -91,19 +93,12 @@ public class finance {
 		newFrame.add(nPanel);
 		//newCon.add(nPanel);
 		
-		
-	
-	
-		
-		//nArea = new JTextArea();
-		//nArea.setBounds(100,100,100,100);
-		//nArea.setBackground(Color.RED);
-		
-		
 		}
 	public void loanCalclator() {
 		titleNamePanel.setVisible(false);
 		learnPanel.setVisible(false);
+		//nPanel.setVisible(false);
+		
 		loanCalc s = new loanCalc();
 		
 	}

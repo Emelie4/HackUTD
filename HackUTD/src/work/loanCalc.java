@@ -1,3 +1,4 @@
+package work;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -12,10 +13,10 @@ private JButton jbtCompute;
 private JButton jbtReset;
 
 public loanCalc() {
-
-   // setTitle("Loan Calculator");
-  //  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setSize(500,300);
+	
+   //newFrame.setTitle("Loan Calculator");
+    setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE );
+    setSize(800,600);
     setLocationRelativeTo(null);
     
     setLayout(new GridLayout(5,2,5,5));
@@ -34,7 +35,7 @@ public loanCalc() {
     jbtCompute = new JButton("Compute");
     jbtReset = new JButton("Reset");
 
-    add (jlInvestmentAmount);
+    add(jlInvestmentAmount);
     add (jtfInvestmentAmount);
     add (jlNumberOfYears);
     add (jtfNumberOfYears);

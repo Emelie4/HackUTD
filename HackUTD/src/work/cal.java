@@ -1,3 +1,4 @@
+package work;
 import java.awt.*;
 public class cal extends Frame {
 cal(){
