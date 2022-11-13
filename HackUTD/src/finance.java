@@ -13,7 +13,8 @@ public class finance {
 	Font learnFont = new Font("Times New Roman", Font.PLAIN, 40);
 	JButton learnButton;
 	tHandler tHand = new tHandler();
-	JTextArea nArea;
+	LCHandler lcHand = new LCHandler();
+	
 	
 
 	public static void main(String[] args) {
@@ -34,7 +35,6 @@ public class finance {
 		newFrame.getContentPane().setBackground(Color.BLACK);
 		newFrame.setLayout(null);
 		
-		newCon = newFrame.getContentPane();
 		newCon = newFrame.getContentPane();
 		
 		titleNamePanel = new JPanel();
@@ -67,13 +67,55 @@ public class finance {
 		titleNamePanel.setVisible(false);
 		learnPanel.setVisible(false);
 		nPanel = new JPanel();
-		newCon.add(nPanel);
-		nArea = new JTextArea();
-		nArea.setBounds(100,100,100,100);
-		nArea.setBackground(Color.RED);
+		nPanel.setLayout(new GridLayout(5,5));
+		JButton lcCalc = new JButton("Loan Calculator");
+		JButton scCalc = new JButton("Savings Calculator");
+		JButton bcCalc = new JButton("Budget Calculator");
+		JButton cc = new JButton("Currency Converter");
+		
+		nPanel.add(scCalc);
+		nPanel.add(bcCalc);
+		nPanel.add(cc);
+		
+		lcCalc.setBackground(Color.WHITE);
+		lcCalc.setForeground(Color.BLACK);
+		lcCalc.setFont(learnFont);
+		lcCalc.addActionListener(lcHand);
+		
+	//	nPanel.setBounds(300,250,200,100);
+		nPanel.setBackground(Color.BLACK);
+		nPanel.add(lcCalc);
+		
+		
+		
+		
+		
 		nPanel.setVisible(true);
 		
+	newFrame.add(nPanel);
+		//newCon.add(nPanel);
+		
+		
+	
+	
+		
+		//nArea = new JTextArea();
+		//nArea.setBounds(100,100,100,100);
+		//nArea.setBackground(Color.RED);
+		
+		
 		}
+	public void loanCalclator() {
+		titleNamePanel.setVisible(false);
+		learnPanel.setVisible(false);
+		loanCalc s = new loanCalc();
+		
+	}
+	public class LCHandler implements ActionListener{
+		public void actionPerformed(ActionEvent event) {
+			loanCalclator();
+		}
+	}
 
 	public class tHandler implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
