@@ -1,15 +1,18 @@
 import java.awt.*;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+
 
 public class finance {
 	
 	JFrame newFrame;
 	Container newCon;
-	JPanel titleNamePanel;
+	JPanel titleNamePanel, learnPanel, nPanel;
 	JLabel titleNameLabel;
+	Font titleFont = new Font("Times New Roman", Font.PLAIN, 80);
+	Font learnFont = new Font("Times New Roman", Font.PLAIN, 40);
+	JButton learnButton;
+	JTextArea = nArea;
 	
 
 	public static void main(String[] args) {
@@ -25,23 +28,51 @@ public class finance {
 		newFrame = new JFrame("FinanceYouWell");
 		newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		newFrame.setSize(800,600);
+		newFrame.setResizable(false);
 		newFrame.setLocationRelativeTo(null);
-		newFrame.getContentPane().setBackground(Color.WHITE);
+		newFrame.getContentPane().setBackground(Color.BLACK);
 		newFrame.setLayout(null);
+		
 		newCon = newFrame.getContentPane();
 		newCon = newFrame.getContentPane();
+		
 		titleNamePanel = new JPanel();
-		titleNameLabel = new JLabel();
+		titleNameLabel = new JLabel("FinanceYouWell");
+		titleNameLabel.setForeground(Color.WHITE);
+		titleNameLabel.setFont(titleFont);
+		titleNamePanel.add(titleNameLabel);
 		titleNamePanel.setBounds(100,100,600,150);
 		titleNamePanel.setBackground(Color.BLACK);
 		
-		newCon.add(titleNamePanel);
+		learnPanel = new JPanel();
+		learnButton = new JButton("LEARN");
+		learnButton.setBackground(Color.WHITE);
+		learnButton.setForeground(Color.BLACK);
+		learnButton.setFont(learnFont);
+		
+		learnPanel.setBounds(300,250,200,100);
+		learnPanel.setBackground(Color.BLACK);
+		learnPanel.add(learnButton);
+		
+		newCon.add(learnPanel);
 		
 		
-		
-		
-		
+		newCon.add(titleNamePanel);	
 		newFrame.setVisible(true);
 	}//end of finance constructor
+	
+	public void nextPanel() {
+		nPanel = new JPanel();
+		nPanel.setBounds(100, 100, 600, 250);
+		nPanel.setBackground(Color.BLUE);
+		
+		nArea = new JTextArea();
+		
+		//nArea.setBounds(100,100,100,100);
+		//nArea.setBackgound();
+		
+		newCon.add(nPanel);
+	}
 
+	
 }//end of class
