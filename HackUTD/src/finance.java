@@ -77,12 +77,9 @@ public class finance {
 		nPanel.add(bcCalc);
 		nPanel.add(cc);
 		
-		lcCalc.setBackground(Color.WHITE);
-		lcCalc.setForeground(Color.BLACK);
-		lcCalc.setFont(learnFont);
 		lcCalc.addActionListener(lcHand);
 		
-	//	nPanel.setBounds(300,250,200,100);
+		nPanel.setBounds(0,0,800,600);
 		nPanel.setBackground(Color.BLACK);
 		nPanel.add(lcCalc);
 		
@@ -91,8 +88,7 @@ public class finance {
 		
 		
 		nPanel.setVisible(true);
-		
-	newFrame.add(nPanel);
+		newFrame.add(nPanel);
 		//newCon.add(nPanel);
 		
 		
